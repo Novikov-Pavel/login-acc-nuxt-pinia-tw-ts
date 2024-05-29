@@ -1,0 +1,43 @@
+.default-link {
+  color: $default--blue;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.error-text {
+  color: $error-color;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.form {
+  width: min(453px, 100%);
+
+  &__title {
+    margin: 0 -12px;
+  }
+}
+
+.divider-text {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  white-space: nowrap;
+  color: $gray--primary;
+
+  &:before,
+  &:after {
+    content: '';
+    height: 1px;
+    width: 100%;
+    background-color: $gray--primary;
+  }
+}
+
+.paragraph-with-span {
+  span {
+    font-size: inherit;
+    line-height: inherit;
+  }
+}

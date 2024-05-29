@@ -1,0 +1,11 @@
+@import '_variables';
+@import '_base';
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  color: $black;
+}
+
+*.inter {
+  font-family: 'Inter', sans-serif;
+}

@@ -1,0 +1,120 @@
+/**
+  Переменные для цветов
+  */
+
+$black: #09090B;
+$violet: rgba(128, 152, 249, 1);
+$violet--primary: rgba(128, 152, 249, 0.50);
+$violet--light: rgba(128, 152, 249, 0.10);
+$gray--primary: #71717A;
+$default--blue: #8098F9;
+$error-color: rgba(255, 101, 132, 1);
+$white: #E0EAFF;
+
+/**
+  Переменные для шрифтов
+ */
+
+ $font-size-1: 12px;
+ $font-size-2: 16px;
+ $font-size-3: 18px;
+ $font-size-4: 24px;
+ $font-size-5: 36px;
+ 
+ $font-size-18: 18px;
+ $font-size-16: 16px;
+ $font-size-14: 14px;
+ $font-size-12: 12px;
+ 
+ $h1: 32px;
+ $h2: 24px;
+ $h3: 18px;
+ 
+ /**
+   Основные переменные для media запросов при изменении ширины экрана
+ */
+ 
+ $media-xl: 1440px;
+ $media-xl-1: 1439.98px;
+ 
+ $media-lg: 1280px;
+ $media-lg-1: 1279.98px;
+ 
+ $media-md: 1024px;
+ $media-md-1: 1023.98px;
+ 
+ $media-sm: 768px;
+ $media-sm-1: 767.98px;
+ 
+ /**
+   дополнительные переменные для media запросов при изменении ширины экрана
+ */
+ 
+ $media-576: 576px;
+ $media-575: 575px;
+ $media-425: 425px;
+ $media-424: 424px;
+ 
+ /**
+   Переменные для z-index
+  */
+ $slider-navigation: 3;
+ $slider-pagination: 3;
+ 
+ 
+ // =============================================================================
+ // String Replace
+ // =============================================================================
+ 
+ @function str-replace($string, $search, $replace: '') {
+   $index: str-index($string, $search);
+ 
+   @if $index {
+     @return str-slice($string, 1, $index - 1) + $replace +
+       str-replace(
+         str-slice($string, $index + str-length($search)),
+         $search,
+         $replace
+       );
+   }
+ 
+   @return $string;
+ }
+ 
+ //Размеры экранов
+ 
+ /**
+   Десктоп маленький
+  */
+ @mixin xl {
+   @media screen and (max-width: $media-xl-1) {
+     @content;
+   }
+ }
+ 
+ /**
+   Планшет горизонтальный
+  */
+ @mixin lg {
+   @media screen and (max-width: $media-lg-1) {
+     @content;
+   }
+ }
+ 
+ /**
+   Планшет вертикальный
+  */
+ @mixin md {
+   @media screen and (max-width: $media-md-1) {
+     @content;
+   }
+ }
+ 
+ /**
+   Мобильные устройства
+  */
+ @mixin sm {
+   @media screen and (max-width: $media-sm-1) {
+     @content;
+   }
+ }
