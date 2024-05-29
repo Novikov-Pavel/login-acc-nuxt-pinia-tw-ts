@@ -13,5 +13,6 @@ export interface IAlertOptions {
 export enum routesUrl {
   signup = '/signup',
   signin = '/signin',
-  otp = '/otp'
+  otp = '/otp',
+  main = '/'
 }
