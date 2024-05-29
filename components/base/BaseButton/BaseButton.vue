@@ -7,10 +7,7 @@
 </template>
 
 <script setup lang="ts">
-interface IProps {
-  isDisabled?: boolean;
-  isLoading?: boolean;
-}
+import type { IProps } from '@/components/base/BaseButton/types';
 
 defineProps<IProps>();
 </script>
