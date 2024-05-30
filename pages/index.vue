@@ -2,9 +2,9 @@
   <main-layout image="login-image">
     <template #form>
       <div :class="['form flex flex-col gap-[25px] items-center justify-center select-none']">
-        <h1 class="form__title text-4xl font-bold text-center">
+        <h2 class="form__title text-4xl font-bold text-center">
           Login to your Account
-        </h1>
+        </h2>
         <p class="divider-text">with email</p>
 
         <div :class="['flex flex-col gap-[10px] w-full']">
@@ -56,7 +56,7 @@ import useVuelidate from '@vuelidate/core';
 import { useRulesValidate } from '@/common/rulesValidate';
 import { useAuthStore } from '@/store/authStore';
 import { MainLayout } from '@/layouts';
-import { uiButton, uiInput,  } from '@/components/UI';
+import { uiButton, uiInput } from '@/components/UI';
 import { uiModal } from '@/components';
 import { routesUrl, type IAlertOptions } from '~/types';
 

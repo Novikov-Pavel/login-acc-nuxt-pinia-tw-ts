@@ -1,7 +1,7 @@
 <template>
   <div :class="['flex flex-col gap-[6px]']">
     <label :class="['ui-input inter', { error: errors?.length }]">
-      <base-svg v-if="icon" :icon="icon" :size="iconSize" />
+      <ui-svg v-if="icon" :icon="icon" :size="iconSize" />
       <input
         :type="passType ? passType : type"
         :disabled="isDisabled"
