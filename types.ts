@@ -17,9 +17,10 @@ export enum routesUrl {
   main = "/",
 }
 
-export interface payloadUserI {
-  username: string;
-  email: string;
+export interface payloadUserCodeI {
+  username?: string;
+  email?: string;
+  code?: string
 }
 
 export interface payloadLogInI {
