@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import { UISvg } from '@/components/UI';
+import { uiSvg } from '@/components/UI';
 import type { IPropsInput } from '@/components/UI/UIInput/types';
 
 withDefaults(defineProps<IPropsInput>(), {

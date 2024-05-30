@@ -1,10 +1,14 @@
 <template>
   <div :class="['grid h-screen md:grid-cols-2 grid-cols-1']">
-    <div class="flex flex-col items-center justify-center p-10">
-      <slot name="form"/>
+    <div
+      :class="['bg-leftside flex flex-col items-center justify-center p-10 rounded-l-[50px]']"
+    >
+      <slot name="form" />
     </div>
 
-    <div :class="['flex-col items-center justify-center bg-[$bg] p-2 md:flex hidden']">
+    <div
+      :class="['flex-col items-center justify-center bg-rightside p-2 md:flex rounded-r-[50px]']"
+    >
       <img :src="`img/${image}.png`" v-if="image" />
       <div :class="['py-[50px]']">
         <slot name="description" />

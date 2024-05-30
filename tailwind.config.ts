@@ -8,8 +8,11 @@ module.exports = {
     "./error.vue",
   ],
   theme: {
-    extend: {},
-    
+    colors: {
+      leftside: "#F5F8FF",
+      rightside: "#6172F3",
+    },
+    extend: {}
   },
   plugins: [],
-}
+};

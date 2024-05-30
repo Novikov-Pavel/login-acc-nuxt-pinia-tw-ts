@@ -26,5 +26,5 @@ const handleClose = () => {
 
 <style scoped lang="scss">
 @import '@/assets/scss/app.scss';
-@import '@/components/Modal/UIModal/styles.scss';
+@import '@/components/Modal/styles.scss';
 </style>
