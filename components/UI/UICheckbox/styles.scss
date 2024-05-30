@@ -1,11 +1,11 @@
-.base {
+.ui {
   &-checkbox {
     display: flex;
     align-items: center;
     gap: 10px;
 
     &.error {
-      .base-checkbox {
+      .ui-checkbox {
         &__styled {
           border-color: $error-color;
         }

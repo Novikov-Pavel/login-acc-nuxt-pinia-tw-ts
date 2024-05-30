@@ -1,1 +1,0 @@
-export { default as BaseCheckbox } from "@/components/base/BaseCheckbox/BaseCheckbox.vue";

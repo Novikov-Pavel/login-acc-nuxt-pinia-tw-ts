@@ -7,9 +7,9 @@
 </template>
 
 <script setup lang="ts">
-import type { IProps } from '@/components/base/BaseOtp/types';
+import type { IPropsOtp } from '@/components/UI/UIOtp/types';
 
-const props = defineProps<IProps>();
+const props = defineProps<IPropsOtp>();
 const emit = defineEmits(['update:modelValue']);
 const inputs = ref<HTMLInputElement[] | null>(null);
 
@@ -101,5 +101,5 @@ onUnmounted(() => {
 
 <style scoped lang="scss">
 @import '@/assets/scss/app.scss';
-@import '@/components/base/BaseOtp/styles.scss';
+@import '@/components/UI/UIOtp/styles.scss';
 </style>

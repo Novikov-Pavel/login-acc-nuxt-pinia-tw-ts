@@ -1,6 +1,6 @@
 import type { ErrorObject } from '@vuelidate/core';
 
-export interface IProps {
+export interface IPropsInput {
   type?: string;
   isDisabled?: boolean;
   placeholder?: string;

@@ -1,4 +1,4 @@
-export interface IProps {
+export interface IPropsSvg {
   icon: string;
   fill?: string;
   stroke?: string;

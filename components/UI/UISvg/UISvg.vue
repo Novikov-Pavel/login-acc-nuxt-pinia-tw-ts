@@ -11,9 +11,9 @@
 
 <script setup lang="ts">
 import { computed, defineProps } from 'vue';
-import type { IProps } from '@/components/base/BaseSvg/types'
+import type { IPropsSvg } from '@/components/UI/UISvg/types'
 
-const props = withDefaults(defineProps<IProps>(), {
+const props = withDefaults(defineProps<IPropsSvg>(), {
   name: '',
   useOriginSize: true
 })
@@ -27,5 +27,5 @@ const classes = computed(() => {
 </script>
 
 <style scoped lang="scss">
-@import '@/components/base/BaseSvg/styles.scss';
+@import '@/components/UI/UISvg/styles.scss';
 </style>

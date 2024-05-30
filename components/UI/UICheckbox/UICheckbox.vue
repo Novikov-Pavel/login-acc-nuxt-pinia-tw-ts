@@ -1,9 +1,9 @@
 <template>
-  <label :class="['base-checkbox', { error: errors?.length }]">
-    <span :class="['base-checkbox__styled', { active: modelValue }]" />
+  <label :class="['ui-checkbox', { error: errors?.length }]">
+    <span :class="['ui-checkbox__styled', { active: modelValue }]" />
     <p>
-      Accept 
-      <nuxt-link to="#" class="default-link">
+      Accept
+      <nuxt-link :to="routesUrl.main" class="default-link">
         terms and conditions
       </nuxt-link>
     </p>
@@ -16,9 +16,10 @@
 </template>
 
 <script setup lang="ts">
-import type { IProps } from '@/components/base/BaseCheckbox/types';
+import type { IPropsChechbox } from '@/components/UI/UICheckbox/types';
+import { routesUrl } from '~/types';
 
-withDefaults(defineProps<IProps>(), {
+withDefaults(defineProps<IPropsChechbox>(), {
   modelValue: false,
   errors: () => [],
   formName: '',
@@ -33,5 +34,5 @@ const handleInput = (e: Event) => {
 
 <style scoped lang="scss">
 @import '@/assets/scss/app.scss';
-@import '@/components/base/BaseCheckbox/styles.scss';
+@import '@/components/UI/UICheckbox/styles.scss';
 </style>
