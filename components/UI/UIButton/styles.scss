@@ -1,7 +1,7 @@
 .ui {
   &-button {
     width: 100%;
-    background-color: red;
+    background-color: $red;
     border-radius: 10px;
     min-height: 64px;
     display: flex;
@@ -11,7 +11,7 @@
     font-size: 1.25rem;
     font-weight: 700;
     line-height: 1.5rem;
-    color: white;
+    color: $purewhite;
     transition: 0.3s background-color ease;
     padding: 0 16px;
 
@@ -20,7 +20,7 @@
         content: "";
         width: 30px;
         height: 30px;
-        border: 5px solid #fff;
+        border: 5px solid $purewhite;
         border-bottom-color: transparent;
         border-radius: 50%;
         display: inline-block;
@@ -39,7 +39,7 @@
     }
 
     &:disabled {
-      background-color: red;
+      background-color: $red;
       cursor: not-allowed;
     }
 
@@ -47,19 +47,19 @@
       &:hover,
       &:active,
       &:focus-within {
-        background-color: rgba(red, 0.8);
+        background-color: rgba($red, 0.8);
       }
     }
 
     &.transparent {
-      border: 2px solid red;
+      border: 2px solid $red;
       background-color: transparent;
-      color: red;
+      color: $red;
 
       &:hover,
       &:active,
       &:focus-within {
-        background-color: rgba(red, 0.2);
+        background-color: rgba($red, 0.2);
       }
     }
   }

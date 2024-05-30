@@ -1,10 +1,6 @@
 .modal {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,17 +8,14 @@
   z-index: 10;
 
   &__overlay {
-    background-color: rgba(black, 0.5);
+    background-color: rgba($black, 0.5);
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     z-index: 1;
   }
 
   &__content {
-    background-color: white;
+    background-color: $purewhite;
     border-radius: 8px;
     width: min(400px, 100%);
     padding: 1.5rem 2rem;
@@ -42,10 +35,6 @@
     align-items: center;
     justify-content: center;
     margin-top: 0.5rem;
-
-    // :deep(.base-button) {
-    //   width: fit-content;
-    // }
   }
 
   &__title {

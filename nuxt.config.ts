@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'ru' },
-      title: 'Auth service', 
+      title: 'login account NUXT Pinia Tailwind Typescript', 
     },
   },
   modules: [
@@ -36,6 +36,5 @@ export default defineNuxtConfig({
   },
   alias: {
     '@': fileURLToPath(new URL('./', import.meta.url)),
-
   }
 })
