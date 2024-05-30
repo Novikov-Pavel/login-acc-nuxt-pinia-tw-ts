@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import type { IPropsButton } from '@/components/UI/UIButton/types';
+import type { IPropsButton } from '@/components/UI';
 
 defineProps<IPropsButton>();
 </script>

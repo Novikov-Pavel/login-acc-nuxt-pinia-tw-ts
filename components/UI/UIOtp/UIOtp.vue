@@ -13,10 +13,13 @@
 </template>
 
 <script setup lang="ts">
-import type { IPropsOtp } from '@/components/UI/UIOtp/types';
+import type { IPropsOtp } from '@/components/UI';
 
 const props = defineProps<IPropsOtp>();
-const emit = defineEmits(['update:modelValue']);
+const emit = defineEmits<{
+  'update:modelValue': [value: string | number]
+}>();
+
 const inputs = ref<HTMLInputElement[] | null>(null);
 
 const passOtp = () => {

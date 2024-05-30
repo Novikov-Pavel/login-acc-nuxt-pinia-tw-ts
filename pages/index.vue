@@ -60,12 +60,12 @@ import { useAuthStore } from '@/store/authStore';
 import { MainLayout } from '@/layouts';
 import { uiButton, uiInput } from '@/components/UI';
 import { uiModal } from '@/components';
-import { routesUrl, type IAlertOptions } from '~/types';
+import { routesUrl, type IAlertOptions, type payloadLogInI } from '~/types';
 
 const authStore = useAuthStore()
 const { logIn } = authStore
 const isLoading = ref<boolean>(false)
-const initialState = {
+const initialState: payloadLogInI = {
   email: '',
   password: '',
 };

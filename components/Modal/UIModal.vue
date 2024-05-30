@@ -14,10 +14,13 @@
 
 <script setup lang="ts">
 import { uiButton } from '@/components/UI';
-import type { IPropsModal } from './types';
+import { type IPropsModal } from '@/components';
 
 defineProps<IPropsModal>();
-const emit = defineEmits(['update:isOpen']);
+
+const emit = defineEmits<{
+  'update:isOpen': [value: boolean]
+}>()
 
 const handleClose = () => {
   emit('update:isOpen', false);

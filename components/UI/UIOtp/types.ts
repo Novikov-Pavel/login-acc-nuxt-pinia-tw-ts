@@ -1,3 +1,3 @@
 export interface IPropsOtp {
-  modelValue?: string | number;
+  modelValue: string | number;
 }

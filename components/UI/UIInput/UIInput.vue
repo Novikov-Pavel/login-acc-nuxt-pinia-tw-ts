@@ -16,8 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import { uiSvg } from '@/components/UI';
-import type { IPropsInput } from '@/components/UI/UIInput/types';
+import { uiSvg, type IPropsInput } from '@/components/UI';
 
 withDefaults(defineProps<IPropsInput>(), {
   type: 'text',
@@ -25,7 +24,9 @@ withDefaults(defineProps<IPropsInput>(), {
   placeholder: '',
   icon: '',
 });
-const emit = defineEmits(['update:modelValue']);
+const emit = defineEmits<{
+  'update:modelValue': [value: string]
+}>();
 
 const passType = ref<string>('');
 

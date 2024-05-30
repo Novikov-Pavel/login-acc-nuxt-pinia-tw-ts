@@ -10,8 +10,8 @@
 </template>
 
 <script setup lang="ts">
-import { computed, defineProps } from 'vue';
-import type { IPropsSvg } from '@/components/UI/UISvg/types'
+import { computed } from 'vue';
+import type { IPropsSvg } from '@/components/UI'
 
 const props = withDefaults(defineProps<IPropsSvg>(), {
   name: '',

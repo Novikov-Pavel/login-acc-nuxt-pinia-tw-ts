@@ -18,7 +18,7 @@
 </template>
 
 <script setup lang="ts">
-import type { IPropsMainLayout } from '@/layouts/types';
+import type { IPropsMainLayout } from '@/layouts';
 
 withDefaults(defineProps<IPropsMainLayout>(), {
   image: '',

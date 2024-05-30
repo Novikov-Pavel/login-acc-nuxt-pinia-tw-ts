@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import type { IPropsChechbox } from '@/components/UI/UICheckbox/types';
+import type { IPropsChechbox } from '@/components/UI';
 import { routesUrl } from '~/types';
 
 withDefaults(defineProps<IPropsChechbox>(), {
@@ -24,7 +24,9 @@ withDefaults(defineProps<IPropsChechbox>(), {
   errors: () => [],
   formName: '',
 });
-const emit = defineEmits(['update:modelValue']);
+const emit = defineEmits<{
+  'update:modelValue': [value: boolean]
+}>()
 
 const handleInput = (e: Event) => {
   const target = e.target as HTMLInputElement;
