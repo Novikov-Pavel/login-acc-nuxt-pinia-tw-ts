@@ -16,3 +16,13 @@ export enum routesUrl {
   otp = "/otp",
   main = "/",
 }
+
+export interface payloadUserI {
+  username: string;
+  email: string;
+}
+
+export interface payloadLogInI {
+  email: string;
+  password: string;
+}
