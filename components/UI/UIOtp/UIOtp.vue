@@ -1,7 +1,13 @@
 <template>
   <div class="otp-inputs" id="inputs" @click="focusFirstInput">
-    <div class="otp-input" v-for="_ in Array(6)">
-      <input type="text" inputmode="numeric" maxlength="2" placeholder="-" ref="inputs" />
+    <div class="otp-input" v-for="_ in Array(6)" :key="_">
+      <input
+        type="text"
+        inputmode="numeric"
+        maxlength="2"
+        placeholder="-"
+        ref="inputs"
+      />
     </div>
   </div>
 </template>
@@ -32,8 +38,8 @@ const focusFirstInput = () => {
   inputs.value[0].focus();
 };
 
-const focusNextInput = (e: Event, v = 0) => {
-  const target = e.target;
+const focusNextInput = (e: KeyboardEvent, v = 0) => {
+  const target = e.target as HTMLInputElement;
   if (!target?.value) return;
 
   const val = target.value;
@@ -57,10 +63,10 @@ const focusNextInput = (e: Event, v = 0) => {
   }
 };
 
-const focusPrevInput = (e: Event, v = 0) => {
+const focusPrevInput = (e: KeyboardEvent, v = 0) => {
   if (!inputs.value) return;
   const target = e.target as HTMLInputElement;
-  const key = e.key.toLowerCase();
+  const key = e.key;
 
   if (key === 'backspace' || key === 'delete') {
     target.value = '';

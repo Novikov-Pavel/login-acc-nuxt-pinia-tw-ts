@@ -1,7 +1,9 @@
 <template>
   <main-layout image="login-image">
     <template #form>
-      <div :class="['form flex flex-col gap-[25px] items-center justify-center select-none']">
+      <div
+        :class="['form flex flex-col gap-[25px] items-center justify-center']"
+      >
         <h2 class="form__title text-4xl font-bold text-center">
           Login to your Account
         </h2>
@@ -40,10 +42,10 @@
     </template>
     
     <template #description>
-      <p :class="['text-center text-xl/[1.5rem] font-bold select-none']">
+      <p :class="['text-center text-xl/[1.5rem] font-bold']">
         Connect with any device.
       </p>
-      <p :class="['text-center text-base/[1.5rem] select-none']">
+      <p :class="['text-center text-base/[1.5rem]']">
         Everything you need is an internet connection.
       </p>
     </template>

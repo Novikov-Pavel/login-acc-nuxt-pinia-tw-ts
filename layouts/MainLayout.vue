@@ -1,5 +1,5 @@
 <template>
-  <div :class="['grid h-screen md:grid-cols-2 grid-cols-1']">
+  <div :class="['grid h-screen md:grid-cols-2 grid-cols-1 select-none']">
     <div
       :class="['bg-leftside flex flex-col items-center justify-center p-10 rounded-l-[50px]']"
     >

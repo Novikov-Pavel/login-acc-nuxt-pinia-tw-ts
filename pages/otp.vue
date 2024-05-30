@@ -40,14 +40,14 @@
 </template>
 
 <script setup lang="ts">
-import { storeToRefs } from 'pinia';
+import { watch, ref, computed } from 'vue'
 import { useRouter } from 'vue-router';
+import { storeToRefs } from 'pinia';
 import { useAuthStore } from '@/store/authStore';
 import { MainLayout } from '@/layouts';
-import { uiButton, uiInput, uiCheckbox, uiOtp } from '@/components/UI';
+import { uiButton, uiOtp } from '@/components/UI';
 import useVuelidate from '@vuelidate/core';
 import { useRulesValidate } from '@/common/rulesValidate';
-import { watch, ref, computed } from 'vue'
 import { routesUrl } from '~/types';
 
 const authStore = useAuthStore();
