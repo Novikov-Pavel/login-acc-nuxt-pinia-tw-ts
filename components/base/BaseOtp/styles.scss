@@ -1,0 +1,40 @@
+.otp {
+  &-inputs {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+
+    @include md {
+      gap: 10px;
+    }
+  }
+  &-input {
+    border: 2px solid $violet--primary;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $violet--light;
+    width: max(100%, 64px);
+    height: 64px;
+    pointer-events: none;
+
+    input {
+      outline: none;
+      font-size: 2rem;
+      line-height: 2.25rem;
+      background: transparent;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+
+      &:focus {
+        &::placeholder {
+          color: transparent;
+        }
+      }
+    }
+  }
+}
